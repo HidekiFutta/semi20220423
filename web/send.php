@@ -254,7 +254,7 @@ $isSend = true;
 								<br>
 							</p>
 							<p><br>
-								<a href="http://www.daihougi.ne.jp/" target="_top"><img src="http://www.daihougi.ne.jp/top_images/oartt_white.gif" alt="" width="137" height="27" border="0"></a></p>
+								<a href="http://www.daihougi.ne.jp/" target="_top"><img src="/conf_ok.jpg" alt="" width="137" height="27" border="0"></a></p>
 						</div>
 					</td>
 					<td width="32" height="340"></td>

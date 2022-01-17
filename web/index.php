@@ -2,20 +2,20 @@
   <?php
 
     //イベントによって変更する6箇所 + ZoomURL + DataBaseのURI5つ
-    $title =  "明日から役立つセミナー"; //あまり長くなると折り返すので注意！　52行目に代入
-    $kaisaibi="2022-03-05T17:00:00";  //開催終了後（時間）に受付を停止　244行目に代入
-    $limit=   "2022-03-05T15:59:59";  //締切日の指定 締切日の24時に締め切る　235行目に代入
-    $k_teiin ="0";                   //会場の定員　95行目に代入
+    $title =  "組織部学術研修会"; //あまり長くなると折り返すので注意！　52行目に代入
+    $kaisaibi="2022-04-23T17:00:00";  //開催終了後（時間）に受付を停止　244行目に代入
+    $limit=   "2022-02-21T23:59:59";  //締切日の指定 締切日の24時に締め切る　235行目に代入
+    $k_teiin ="12";                   //会場の定員　95行目に代入
     $w_teiin ="80";                   //Webの定員　91行目に代入
-    $Tanto_Address = "sahara@daihougi.ne.jp"; //開催担当責任者のメルアド　または　ML
+    $Tanto_Address = "fujita@daihougi.ne.jp"; //開催担当責任者のメルアド　または　ML
     //Zoom URL
-    $zoom  = "https://us02web.zoom.us/meeting/register/tZMtde-prTMqGdejcSWAxjq9dl0NJ_sMzdko";
+    $zoom  = "https://us02web.zoom.us/meeting/register/_??????????????????";
     //Heroku- AppName- Resources- Herok Postgres- Setting- Database Credentials から
-    $Host     = "ec2-3-230-219-251.compute-1.amazonaws.com"; 
-    $Database = "dfbkketl37sb46";
-    $User     = "roytnotfcgqxlo";
+    $Host     = "ec2-34-230-198-12.compute-1.amazonaws.com"; 
+    $Database = "d32nf8a6j7747f";
+    $User     = "kbqvnqamqwzqlb";
     $Port     = "5432";
-    $Password = "bdcd362658461f859b4b12571848bd943631b2b5c7429ea05ab2412f6ea3b373";
+    $Password = "fdbf13dc595b6a64698932988de9a757b833b09399b6b8c0285a5751ff4711e8";
     //以上計12か所イベントごとに要変更
     $limit2 =date('n月j日',  strtotime($limit)); 
     $conn = "host=".$Host." "."port=".$Port." "."dbname=".$Database." "."user=".$User." "."password=".$Password;
@@ -88,9 +88,13 @@
                         <td class="contact-body">
                             <label class="contact-keitai">
                                 <input type="radio" name="keitai" value="Web参加" checked="checked" <?php if( !empty($_POST['keitai']) && $_POST['keitai'] === "Web参加" ){ echo 'checked'; } ?>>
-                                <span class="contact-skill-txt">Webのみ  先着<?php echo $w_teiin?>名（会員優先）</span>
+                                <span class="contact-skill-txt">Web参加  会員優先 先着<?php echo $w_teiin?>名</span>
                             </label>
-                                              
+                            <label class="contact-skill">
+                                <input type="radio" id="kaijyo" name="keitai" value="会場参加" <?php if( !empty($_POST['keitai']) && $_POST['keitai'] === "会場参加" ){ echo 'checked'; } ?>/>
+                                <span class="contact-skill-txt" id="edit_area">会場参加　会員限定 先着<?php echo $k_teiin?>名（締切<?php echo $limit2?>）</span>
+                            </label>                     
+                        </td>                                          
                         </td>
                     </tr>
                     <tr>
