@@ -7,9 +7,9 @@
     $limit=   "2022-04-21T23:59:59";  //締切日の指定 締切日の24時に締め切る　235行目に代入
     $k_teiin ="12";                   //会場の定員　95行目に代入
     $w_teiin ="80";                   //Webの定員　91行目に代入
-    $Tanto_Address = "fujita@daihougi.ne.jp"; //開催担当責任者のメルアド　または　ML
+    $Tanto_Address = "konishi@daihougi.ne.jp"; //開催担当責任者のメルアド　または　ML
     //Zoom URL
-    $zoom  = "https://us02web.zoom.us/meeting/register/_??????????????????";
+    $zoom  = "https://us02web.zoom.us/meeting/register/tZ0oc-murDwuE9Dd6hEI1affPdZKXafWD1A9";
     //Heroku- AppName- Resources- Herok Postgres- Setting- Database Credentials から
     $Host     = "ec2-34-230-198-12.compute-1.amazonaws.com"; 
     $Database = "d32nf8a6j7747f";
@@ -88,7 +88,7 @@
                         <td class="contact-body">
                             <label class="contact-keitai">
                                 <input type="radio" name="keitai" value="Web参加" checked="checked" <?php if( !empty($_POST['keitai']) && $_POST['keitai'] === "Web参加" ){ echo 'checked'; } ?>>
-                                <span class="contact-skill-txt">Web参加  会員優先 先着<?php echo $w_teiin?>名</span>
+                                <span class="contact-skill-txt">Web参加　会員優先 先着<?php echo $w_teiin?>名（当日まで受付）</span>
                             </label>
                             <label class="contact-skill">
                                 <input type="radio" id="kaijyo" name="keitai" value="会場参加" <?php if( !empty($_POST['keitai']) && $_POST['keitai'] === "会場参加" ){ echo 'checked'; } ?>/>
