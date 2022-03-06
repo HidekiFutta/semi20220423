@@ -252,7 +252,7 @@
                   document.getElementById("conf").value = "終　了";  //締切後レイアウトする
                   document.getElementById("conf").disabled = true;  //締切後押せなくする
                   
-                  //<button style="background-color:red">締　切</button>
+                  <button style="background-color:red">締　切</button>
               }                 
             // -->
             </script>            
