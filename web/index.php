@@ -4,10 +4,10 @@
     //イベントによって変更する6箇所 + ZoomURL + DataBaseのURI5つ
     $title =  "組織部学術研修会"; //あまり長くなると折り返すので注意！　52行目に代入
     $kaisaibi="2022-04-23T17:30:00";  //開催終了後（時間）に受付を停止　244行目に代入
-    $limit=   "2022-02-21T23:59:59";  //会場の締切日の指定 締切日の24時に締め切る　235行目に代入
+    $limit=   "2022-04-21T23:59:59";  //会場の締切日の指定 締切日の24時に締め切る　235行目に代入
     $k_teiin ="12";                   //会場の定員　95行目に代入
     $w_teiin ="80";                   //Webの定員　91行目に代入
-    $Tanto_Address = "hima71fggmail.com"; //開催担当責任者のメルアド　または　ML
+    $Tanto_Address = "konishi@daihougi.ne.jp"; //開催担当責任者のメルアド　または　ML
     //Zoom URL
     $zoom  = "https://us02web.zoom.us/meeting/register/tZ0oc-murDwuE9Dd6hEI1affPdZKXafWD1A9";
     //Heroku- AppName- Resources- Herok Postgres- Setting- Database Credentials から
