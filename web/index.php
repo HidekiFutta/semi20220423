@@ -80,7 +80,7 @@
                     <tr>
                         <th class="contact-item">メールアドレス<br>（確認用）</th>
                         <td class="contact-body">
-                            <input type="email"　id="email_2"　required="required"  placeholder="必須"　name="email_2" class="form-text" oninput="CheckEmail_2(this)" value="<?php if(!empty($_POST["email_1"]) ){ echo $_POST["email_1"]; } ?>"/>
+                            <input type="email"　id="email_2" required="required" placeholder="必須" name="email_2" class="form-text" oninput="CheckEmail_2(this)" value="<?php if(!empty($_POST["email_1"]) ){ echo $_POST["email_1"]; } ?>"/>
                         </td>
                     </tr>
                     <tr>
